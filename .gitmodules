@@ -1,0 +1,6 @@
+[submodule "libmoolticute-c"]
+	path = libmoolticute-c
+	url = git@github.com:byterazor/libmoolticute-c.git
+[submodule "yaap"]
+	path = yaap
+	url = git@github.com:byterazor/yaap.git
