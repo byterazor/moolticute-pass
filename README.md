@@ -15,6 +15,7 @@ Copyright 2018 by Dominik Meyer Licensed under GPLv3
 
 * request password from mooltipass device
 * print requested password to stdout or X11 clipboard
+* list services/logins stored on mooltipass device
 
 ## Examples
 
