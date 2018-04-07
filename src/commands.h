@@ -27,6 +27,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
 int get(int argc, char **argv);                 ///< get the password from the mooltipass device
-int ls(int argc, char **argv);                 ///< list services/logins on mooltipass device
-
+int ls(int argc, char **argv);                  ///< list services/logins on mooltipass device
+int info(int argc, char **argv);                ///< print infos about mooltipass device
 #endif

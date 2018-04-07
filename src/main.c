@@ -62,6 +62,16 @@ int main(int argc, char **argv)
   };
   argparse_add_command(argparse_ctx, &ls_cmd);
 
+  // command-line info command
+  struct arg_parse_cmd info_cmd = {
+    {ARG_CMD,1,0},                  // set it mandatory, all commands should be mandatory
+    0,
+    "info",
+    "print some infos about your mooltipass device",
+    &info
+  };
+  argparse_add_command(argparse_ctx, &info_cmd);
+
   // parse the command line, this function calls the correct function for each command
   int ret=argparse_parse(argparse_ctx, argc, argv);
 
