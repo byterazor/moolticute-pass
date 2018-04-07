@@ -34,7 +34,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 * @param argc - number of command line arguments
 * @param argv - array of command line arguments
 *
-* @return standard return value 
+* @return standard return value
 */
 int main(int argc, char **argv)
 {
@@ -50,6 +50,17 @@ int main(int argc, char **argv)
     &get
   };
   argparse_add_command(argparse_ctx, &get_cmd);
+
+
+  // command-line ls command
+  struct arg_parse_cmd ls_cmd = {
+    {ARG_CMD,1,0},                  // set it mandatory, all commands should be mandatory
+    0,
+    "ls",
+    "list services/logins on mooltipass device",
+    &ls
+  };
+  argparse_add_command(argparse_ctx, &ls_cmd);
 
   // parse the command line, this function calls the correct function for each command
   int ret=argparse_parse(argparse_ctx, argc, argv);
